@@ -1,0 +1,70 @@
+Algorithme à affiner :
+- mettre un compteur à 0
+- afficher le compteur
+soit cpt un entier ;
+soit c un caractère ;
+cpt <- 0 ;
+lire(c) ;
+tant-que (c ≠ '.')
+ si (c = 'e')
+ cpt <- cpt+1;
+ fin-si
+ lire(c) ;
+fin tant-que
+ecrire(cpt) ;
+ deuxieme  tache
+
+ Algorithme fusionListes Algorithme fusionListes
+# cet algorithme permet de fusionner deux listes triées
+variables liste1, liste2, listeFusion : listes d’entiers naturels
+ n, i1, i2, nbEléments1, nbEléments2, nbMin : entiers naturels
+début
+ # initialisation liste1
+[ ]
+ # boucle de lecture liste1
+ Entrer ( n )
+ tantque ( n ≠ 0 )
+ # on rajoute l’entier n en fin de liste
+liste1 + [ n ]
+ # on lit la valeur suivante
+ Entrer ( n )
+ fin_tantque
+ # initialisation liste2
+[ ]
+ # boucle de lecture liste2
+ Entrer ( n ) 
+ tantque ( n ≠ 0 )
+liste2 + [ n ]
+ Entrer ( n )
+ fin_tantque
+ # initialisations pour fusion
+nombreEléments ( liste1 )
+nombreEléments ( liste2 )
+[ ]
+0
+0
+ si ( nbEléments1 < nbEléments2 )
+nbEléments1
+nbEléments2
+ fin_si
+ # boucle principale de fusion
+ tantque ( i1 < nbEléments1 ) et ( i2 < nbEléments2 )
+ faire
+ si ( liste1 [ i1 ] < liste2 [ i2 ] )
+listeFusion + [ liste1 [ i1 ] ]
+i1 + 1
+listeFusion + [ liste2 [ i2 ] ]
+i2 + 1
+ fin_si
+ fin_tantque
+ # on recopie la fin de la liste non épuisée
+ si ( i1 < nbEléments1)
+ alors # on recopie la fin de liste1
+listeFusion + liste1 [ i1, nbEléments1 – 1 ]
+ sinon # on recopie la fin de liste2
+listeFusion + liste2 [ i2, nbEléments2 – 1 ]
+ # on affiche la liste fusionnée
+ pour i de 0 à nbEléments1 + nbEléments2 - 1
+ faire Afficher ( listeFusion [ i ] )
+ fin_pour
+fin 
